@@ -1,0 +1,46 @@
+DATABASE MANAGEMENT SYSTEM 15CS53
+
+MODULE 2
+The Relational Data Model and Relational Database Constraints
+and Relational Algebra
+
+2.1 Relational Model Concepts
+
+ Domain: A (usually named) set/universe of atomic values, where by "atomic" we mean
+simply that, from the point of view of the database, each value in the domain is indivisible
+(i.e., cannot be broken down into component parts). 
+
+Examples of domains (some taken from page 147):
+
+o USA_phone_number: string of digits of length
+ten o SSN: string of digits of length nine
+o  Name: string of characters beginning with an upper case letter
+o  GPA: a real number between 0.0 and 4.0
+o  Sex: a member of the set { female, male }
+o  Dept_Code: a member of the set { CMPS, MATH, ENGL, PHYS, PSYC, ... }
+
+These are all logical descriptions of domains. For implementation purposes, it is necessary
+to provide descriptions of domains in terms of concrete data types (or formats) that are
+provided by the DBMS (such as String , int , boolean ), in a manner analogous to how
+programming languages have intrinsic data types.
+
+ Attribute: the name of the role played by some value (coming from some domain) in the
+ context of a relational schema. The domain of attribute A is denoted dom(A) . 
+ Tuple: A tuple is a mapping from attributes to values drawn from the respective domains
+of those attributes. A tuple is intended to describe some entity (or relationship between
+entities) in the miniworld. 
+
+As an example, a tuple for a PERSON entity might be
+
+{ Name --> "Rumpelstiltskin",  Sex --> Male,  IQ --> 143 }
+
+ Relation: A (named) set of tuples all of the same form (i.e., having the same set of
+attributes). The term table is a loose synonym. (Some database purists would argue that a
+ table is "only" a physical manifestation of a relation.) 
+ Relational Schema: used for describing (the structure of) a relation. E.g., R(A 1 , A 2 , ..., A n )
+says that R is a relation with attributes A 1 , ... A n . The degree of a relation is the number of
+attributes it has, here n. 
+
+Example: STUDENT(Name, SSN, Address)
+
+DEPT OF CSE Page 30
